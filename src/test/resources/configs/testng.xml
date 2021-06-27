@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="com.rk.platform.Listeners"/>
+        <listener class-name="com.rk.commons.reports.ExtentReporterNG"/>
+    </listeners>
+    <test name="Test runner">
+        <classes>
+            <class name="com.rk.cucumberOptions.TestRunner"/>
+        </classes>
+    </test>
+    <!-- Parameters that need to be set from commandline -->
+    <parameter name="config.file" value="${config.file}" />
+    <parameter name="config.users" value="${config.users}" />
+</suite>
